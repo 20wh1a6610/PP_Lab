@@ -1,0 +1,14 @@
+def linear_search(n,a,element): 
+      for i in range (0,n):
+          if(a[i] == element):
+               return i
+       return -1
+   
+n = 4
+a = [10,60,40,50]
+element = 60
+pos = linear_search(n,a,element)
+if(pos == -1):
+  print("element not found")
+else:
+  print("element found at", pos+1)

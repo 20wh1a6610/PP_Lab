@@ -1,0 +1,20 @@
+def linear_recurr(n,a,i,element):
+    if a[i] == element:
+        return i
+    elif i<n:
+        i = i+1
+        return linear_recurr(n,a,i,element)
+    else:
+        return -1
+n = int(input("enter number of elements:"))
+print("enter elements:")
+a = []
+for i in range(0,n):
+    ele = int(input())
+    a.append(ele)
+element = int(input("enter element to be searched:"))
+pos = linear_recurr(n,a,0,element)
+if(pos == -1):
+    print("element not found")
+else:
+    print("element found at ",pos+1)

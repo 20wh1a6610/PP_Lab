@@ -2,11 +2,14 @@ def linear_search(n,a,element):
       for i in range (0,n):
           if(a[i] == element):
                return i
-       return -1
-   
-n = 4
-a = [10,60,40,50]
-element = 60
+      return -1
+n = int(input("enter number of elements:"))
+print("enter elements:")
+a = []
+for i in range(0,n):
+    ele = int(input())
+    a.append(ele)
+element = int(input("enter element to be searched:"))
 pos = linear_search(n,a,element)
 if(pos == -1):
   print("element not found")

@@ -1,0 +1,24 @@
+def binary_search(a,low,high,element):
+    while high>=low:
+        mid = (low+high) // 2
+        if a[mid] == element:
+            return mid
+        elif a[mid] < element:
+            low = mid+1
+        else:
+            high = mid-1
+    return -1
+n = int(input("enter number of elements:"))
+print("enter elements:")
+a = []
+for i in range(0,n):
+    ele = int(input())
+    a.append(ele)
+a.sort()
+print(a)
+element = int(input("enter element to be searched:"))
+pos = binary_search(a,0,n-1,element)
+if(pos == -1):
+    print("element not found")
+else:
+    print("element found at",pos+1)

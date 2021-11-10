@@ -14,6 +14,8 @@ a = []
 for i in range(0,n):
     ele = int(input())
     a.append(ele)
+a.sort()
+print(a)
 
 element = int(input("enter element to be searched:"))
 pos = binary_search(a,0,n-1,element)
